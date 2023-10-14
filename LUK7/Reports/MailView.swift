@@ -16,7 +16,7 @@ struct MailView: UIViewControllerRepresentable {
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = context.coordinator
         mailController.setToRecipients(["marlonrivero1999@gmail.com"])
-        mailController.setSubject("mail_subjet")
+        mailController.setSubject("Report Bug")
         mailController.setMessageBody(getDeviceInfo(), isHTML: false)
         return mailController
     }

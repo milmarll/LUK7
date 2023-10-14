@@ -58,9 +58,16 @@ struct VoucherView: View {
                 ToolbarItem {
                     Button(action: presentBarCode) {
                         Label("Add voucher", systemImage: "barcode.viewfinder")
-                            
+                        
                     }
                 }
+                
+                ToolbarItem {
+                    Button(action: clearCode) {
+                        Label("Clear Code", systemImage: "trash")
+                    }
+                }
+                
             }
             .sheet(isPresented: $isShowBarcode, content: {
                 CodeScannerView(codeTypes: [.code128], simulatedData: "Paul Hudson") { response in
@@ -86,6 +93,10 @@ struct VoucherView: View {
     
     private func presentBarCode() {
         isShowBarcode.toggle()
+    }
+    
+    private func clearCode() {
+        code = ""
     }
 }
 
