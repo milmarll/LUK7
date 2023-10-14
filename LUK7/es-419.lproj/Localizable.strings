@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  LUK7
+
+  Created by Marlon Milanes Rivero on 10/13/23.
+  
+*/
+// INTRO
+"intro_mesjtitle" = "LUK7 Bloqueado";
+"intro_mesj" = "Presiona el botón para desbloquear de forma segura con tu huella dactilar o Face ID, dependiendo del dispositivo.";
+"intro_mesjunlock" = "Para desbloquear";
+// TABView
+"home_home" = "Inicio";
+"home_gear" = "Configuración";
+// HOME
+"home_title" = "Mi Producción";
+// HOMEVIEW
+"home_error" = "Error: Los últimos 4 caracteres de ambas cadenas deben ser dígitos.";
+"home_total" = "LPNs escaneados en total:";
+"home_mejs" = "LPN escaneado al inicio de la producción, escanea el siguiente LPN al final de la producción para calcular la cantidad de artículos escaneados por día.";
+// VOUCHER
+"voucher_mejs" = "Utilice el código de barras de arriba en caso de que haya olvidado su voucher en casa.";
+// MAILBUG
+"mail_subjet" = "Informar un error en la aplicación";
+// MODEL
+"faceidmenjs" = "Utiliza Face ID o huella dactilar para desbloquear";
+// TIMEFACEID
+"timeface1" = "Inmediato";
+"timeface2" = "15 minutos";
+// INFO
+"titledesa" = "Desarrollador";
+"developercreator" = "Creador/Desarrollador";
+"info" = "Información";
+"donate" = "Donar al Proyecto";
+"version" = "Versión";
+"appearance" = "Apariencia";
+"dark" = "Oscuro";
+"ligth" = "Claro";
+"auto" = "Automático";
+"privacy" = "Privacidad";
+"privacymenjs" = "Si activas las opciones de bloqueo, deberás usarlo para desbloquear LUK7.";
+"security" = "Seguridad";
+"time_key" = "Tiempo de autenticación";
+"support_key" = "Soporte";
+"report" = "Informar un error";
+// Donate
+"copied_key" = "Correo Copiado";
+"donatemejs_key" = "El correo electrónico se ha copiado al portapapeles, agrega un nuevo contacto con el nombre Marlon y dona al proyecto utilizando Zelle.";
+"accept_key" = "Aceptar";
+// Terms
+"terms_continu" = "Continuar";
+"terms_title" = "Política de Privacidad";
+"terms_mejs" = "He leído y acepto los términos y condiciones.";
+

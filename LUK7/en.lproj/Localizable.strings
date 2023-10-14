@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  LUK7
+
+  Created by Marlon Milanes Rivero on 10/13/23.
+  
+*/
+//INTRO
+"intro_mesjtitle" = "LUK7 Locked";
+"intro_mesj" = "Press the button to securely unlock with your fingerprint or Face ID depending on the device";
+"intro_mesjunlock" = "To unlock";
+//TABView
+"home_home" = "Home";
+"home_gear" = "Settings";
+//HOME
+"home_title" = "My Production";
+//HOMEVIEW
+"home_error" = "Error: The last 4 characters of both strings must be digits.";
+"home_total" = "Total LPNs scanned:";
+"home_mejs" = "LPN scanned at start of production, scan next LPN at end of production to calculate the number of items scanned per day";
+// VOUCHER
+"voucher_mejs" = "Use the barcode above in case you have forgotten your voucher at home.";
+//MAILBUG
+"mail_subjet" = "Report a bug in the application";
+//MODEL
+"faceidmenjs" = "Use Face ID or fingerprint to unlock";
+//TIMEFACEID
+"timeface1" = "Immediate";
+"timeface2" = "15 minutes";
+//INFO
+"titledesa" = "Developer";
+"developercreator" = "Creator/Developer";
+"info" = "Information";
+"donate" = "Donate to the Project";
+"version" = "Version";
+"appearance" = "Appearance";
+"dark" = "Dark";
+"ligth" = "Ligth";
+"auto" = "Automatic";
+"privacy" = "Privacy";
+"privacymenjs" = "If you activate the lock options, you will need to use it to unlock LUK7.";
+"security" = "Security";
+"time_key" = "Authentication time";
+"support_key" = "Support";
+"report" = "Report Bug";
+//Donate
+"copied_key" = "Copied Mail";
+"donatemejs_key" = "The email has been copied to the clipboard, add a new contact with the name Marlon and donate to the project using Zelle.";
+"accept_key" = "Accept";
+//Terms
+"terms_continu" = "Continue";
+"terms_title" = "Privacy Policy";
+"terms_mejs" = "I have read and accept the terms and conditions.";
+
