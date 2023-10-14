@@ -50,7 +50,7 @@ struct VoucherView: View {
                 
                 ToolbarItem {
                     Button(action: presentAlert) {
-                        Label("Editar", systemImage: "pencil.circle")
+                        Label("edit_key", systemImage: "pencil.circle")
                             .labelStyle(.titleOnly)
                     }
                 }
@@ -74,8 +74,8 @@ struct VoucherView: View {
                     }
                 }
             })
-            .alert("Agregar info", isPresented: $isPresented) {
-                TextField("Nombre", text: $name)
+            .alert("associate_key", isPresented: $isPresented) {
+                TextField("associatename_key", text: $name)
             }
         }
     }

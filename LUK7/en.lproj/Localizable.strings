@@ -20,6 +20,10 @@
 "home_mejs" = "LPN scanned at start of production, scan next LPN at end of production to calculate the number of items scanned per day";
 // VOUCHER
 "voucher_mejs" = "Use the barcode above in case you have forgotten your voucher at home.";
+"edit_key" = "Edit";
+"associate_key" = "Associate";
+"associatename_key" = "Name";
+
 //MAILBUG
 "mail_subjet" = "Report a bug in the application";
 //MODEL

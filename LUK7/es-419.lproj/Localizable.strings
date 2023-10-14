@@ -20,6 +20,9 @@
 "home_mejs" = "LPN escaneado al inicio de la producción, escanea el siguiente LPN al final de la producción para calcular la cantidad de artículos escaneados por día.";
 // VOUCHER
 "voucher_mejs" = "Utilice el código de barras de arriba en caso de que haya olvidado su voucher en casa.";
+"edit_key" = "Editar";
+"associate_key" = "Asociado";
+"associatename_key" = "Nombre";
 // MAILBUG
 "mail_subjet" = "Informar un error en la aplicación";
 // MODEL
