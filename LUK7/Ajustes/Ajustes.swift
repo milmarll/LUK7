@@ -36,15 +36,15 @@ struct Ajustes: View {
                     
                 }
                 
-                NavigationLink(destination: Donar()) {
-                    HStack {
-                        Image(systemName: "hand.thumbsup")
-                            .renderingMode(.original)
-                        Text("donate")
-                            .foregroundColor(.primary)
-                    }
-                    
-                }
+//                NavigationLink(destination: Donar()) {
+//                    HStack {
+//                        Image(systemName: "hand.thumbsup")
+//                            .renderingMode(.original)
+//                        Text("donate")
+//                            .foregroundColor(.primary)
+//                    }
+//                    
+//                }
                 
                 HStack {
                     Image(systemName: "info.circle")

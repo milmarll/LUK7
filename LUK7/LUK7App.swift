@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import FirebaseCore
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+
+    return true
+  }
+}
 
 @main
 struct LUK7App: App {
     let persistenceController = PersistenceController.shared
     @AppStorage("colorSchemeSelection") private var colorSchemeSelection = 0
     @AppStorage("isNotCheckedTerms") var isNotCheckedTerms = true
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
