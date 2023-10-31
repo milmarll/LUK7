@@ -2,7 +2,7 @@
 //  UITabView.swift
 //  LUK7
 //
-//  Created by Elier Ayala Bernal on 2023-10-12.
+//  Created by Marlon Milanes Rivero on 2023-10-12.
 //
 
 import SwiftUI
@@ -15,33 +15,46 @@ struct HomeView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        HomeDetailsView(item: item)
-                            .environment(\.managedObjectContext, viewContext)
-
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+            VStack{
+                List {
+                    ForEach(items) { item in
+                        NavigationLink {
+                            HomeDetailsView(item: item)
+                                .environment(\.managedObjectContext, viewContext)
+                            
+                        } label: {
+                            Text(item.timestamp!, formatter: itemFormatter)
+                        }
+                    }
+                    .onDelete(perform: deleteItems)
+                    
+                    
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        EditButton()
+                    }
+                    
+                    ToolbarItem {
+                        Button(action: addItem) {
+                            Label("Add Item", systemImage: "plus")
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                .navigationTitle("home_title")
+                .navigationBarTitleDisplayMode(.inline)
+                .overlay(alignment: .bottom) {
+                    HStack {
+                        BannerAd(unitID: "ca-app-pub-4020019088912260/1284175430")
+                            .frame(minHeight: 50, maxHeight: 50)
                     }
                 }
+                            
             }
-            .navigationTitle("home_title")
-            .navigationBarTitleDisplayMode(.inline)
+           
             
         }
+        
         
     }
 

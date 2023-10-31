@@ -17,7 +17,7 @@
 //HOMEVIEW
 "home_error" = "Error: The last 4 characters of both strings must be digits.";
 "home_total" = "Total LPNs scanned:";
-"home_mejs" = "LPN scanned at start of production, scan next LPN at end of production to calculate the number of items scanned per day";
+"home_mejs" = "LPN scanned at start of production, scan next LPN at end of production to calculate the number of items scanned.";
 // VOUCHER
 "voucher_mejs" = "Use the barcode above in case you have forgotten your voucher at home.";
 "edit_key" = "Edit";
@@ -55,4 +55,8 @@
 "terms_continu" = "Continue";
 "terms_title" = "Privacy Policy";
 "terms_mejs" = "I have read and accept the terms and conditions.";
+//SETTING
+"setting_share" = "Share";
+"setting_APP" = "Share LUK7";
+"setting_mensj" = "Check out this amazing app.";
 

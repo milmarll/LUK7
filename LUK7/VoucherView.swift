@@ -2,7 +2,7 @@
 //  VoucherView.swift
 //  LUK7
 //
-//  Created by Elier Ayala Bernal on 2023-10-13.
+//  Created by Marlon Milanes Rivero on 2023-10-13.
 //
 
 import SwiftUI
@@ -45,6 +45,12 @@ struct VoucherView: View {
                     }
                 }
             }
+            .overlay(alignment: .bottom) {
+                HStack {
+                    BannerAd(unitID: "ca-app-pub-4020019088912260/1284175430")
+                        .frame(minHeight: 50, maxHeight: 50)
+                }
+            }
             .navigationTitle("Voucher")
             .toolbar {
                 
@@ -85,6 +91,7 @@ struct VoucherView: View {
                 TextField("associatename_key", text: $name)
             }
         }
+        
     }
     
     private func presentAlert() {

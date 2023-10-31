@@ -17,7 +17,7 @@
 // HOMEVIEW
 "home_error" = "Error: Los últimos 4 caracteres de ambas cadenas deben ser dígitos.";
 "home_total" = "LPNs escaneados en total:";
-"home_mejs" = "LPN escaneado al inicio de la producción, escanea el siguiente LPN al final de la producción para calcular la cantidad de artículos escaneados por día.";
+"home_mejs" = "LPN escaneado al inicio de la producción, escanea el siguiente LPN al final de la producción para calcular la cantidad de artículos escaneados.";
 // VOUCHER
 "voucher_mejs" = "Utilice el código de barras de arriba en caso de que haya olvidado su voucher en casa.";
 "edit_key" = "Editar";
@@ -54,4 +54,7 @@
 "terms_continu" = "Continuar";
 "terms_title" = "Política de Privacidad";
 "terms_mejs" = "He leído y acepto los términos y condiciones.";
-
+//SETTING
+"setting_share" = "Compartir";
+"setting_APP" = "Compartir LUK7";
+"setting_mensj" = "Echa un vistazo a esta increíble aplicación.";

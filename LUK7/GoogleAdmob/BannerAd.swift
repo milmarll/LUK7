@@ -2,7 +2,7 @@
 //  BannerAd.swift
 //  BannerADView (iOS)
 //
-//  Created by Balaji on 21/11/21.
+//  Created by Marlon Milanes Rivero on 21/11/23.
 //
 
 import SwiftUI

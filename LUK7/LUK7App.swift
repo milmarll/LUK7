@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import GoogleMobileAds
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -19,6 +20,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct LUK7App: App {
+    init() {
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+    }
+    
     let persistenceController = PersistenceController.shared
     @AppStorage("colorSchemeSelection") private var colorSchemeSelection = 0
     @AppStorage("isNotCheckedTerms") var isNotCheckedTerms = true

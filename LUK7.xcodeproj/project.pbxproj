@@ -23,6 +23,9 @@
 		37131EE92AD8AD80007A5F0E /* LUK7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37131EE82AD8AD80007A5F0E /* LUK7Tests.swift */; };
 		37131EF32AD8AD80007A5F0E /* LUK7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37131EF22AD8AD80007A5F0E /* LUK7UITests.swift */; };
 		37131EF52AD8AD80007A5F0E /* LUK7UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37131EF42AD8AD80007A5F0E /* LUK7UITestsLaunchTests.swift */; };
+		374C219A2AF0986A0028F96B /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374C21992AF0986A0028F96B /* SafariWebView.swift */; };
+		3788E7BC2AEF38F6000B9CEA /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 3788E7BB2AEF38F6000B9CEA /* GoogleMobileAds */; };
+		3788E7C22AEF3A9E000B9CEA /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788E7C12AEF3A9E000B9CEA /* BannerAd.swift */; };
 		378E350F2AD987B600A542A7 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E350E2AD987B600A542A7 /* SplashScreenView.swift */; };
 		378E35112AD987BD00A542A7 /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E35102AD987BD00A542A7 /* TermsView.swift */; };
 		378E35162AD9883600A542A7 /* Donar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E35152AD9883600A542A7 /* Donar.swift */; };
@@ -68,6 +71,9 @@
 		37131EEE2AD8AD80007A5F0E /* LUK7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LUK7UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37131EF22AD8AD80007A5F0E /* LUK7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUK7UITests.swift; sourceTree = "<group>"; };
 		37131EF42AD8AD80007A5F0E /* LUK7UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUK7UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		374C21992AF0986A0028F96B /* SafariWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
+		3788E7C02AEF39CD000B9CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3788E7C12AEF3A9E000B9CEA /* BannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		378E350E2AD987B600A542A7 /* SplashScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		378E35102AD987BD00A542A7 /* TermsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		378E35152AD9883600A542A7 /* Donar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donar.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3788E7BC2AEF38F6000B9CEA /* GoogleMobileAds in Frameworks */,
 				37065D4A2AEDF2D3006AD559 /* FirebaseAnalytics in Frameworks */,
 				37065D4C2AEDF2D3006AD559 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				0E1EF0352AD8E704004A86B3 /* CodeScanner in Frameworks */,
@@ -130,6 +137,8 @@
 		37131ED02AD8AD7D007A5F0E /* LUK7 */ = {
 			isa = PBXGroup;
 			children = (
+				3788E7C02AEF39CD000B9CEA /* Info.plist */,
+				3788E7BD2AEF38FC000B9CEA /* GoogleAdmob */,
 				378E35222AD98BA000A542A7 /* Reports */,
 				378E351B2AD9885B00A542A7 /* ViewModel */,
 				378E35142AD9881C00A542A7 /* Ajustes */,
@@ -175,6 +184,14 @@
 			path = LUK7UITests;
 			sourceTree = "<group>";
 		};
+		3788E7BD2AEF38FC000B9CEA /* GoogleAdmob */ = {
+			isa = PBXGroup;
+			children = (
+				3788E7C12AEF3A9E000B9CEA /* BannerAd.swift */,
+			);
+			path = GoogleAdmob;
+			sourceTree = "<group>";
+		};
 		378E350D2AD9877C00A542A7 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +214,7 @@
 		378E351B2AD9885B00A542A7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				374C21992AF0986A0028F96B /* SafariWebView.swift */,
 				378E351C2AD9886C00A542A7 /* Extensions.swift */,
 			);
 			path = ViewModel;
@@ -230,6 +248,7 @@
 				0E1EF0342AD8E704004A86B3 /* CodeScanner */,
 				37065D492AEDF2D3006AD559 /* FirebaseAnalytics */,
 				37065D4B2AEDF2D3006AD559 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				3788E7BB2AEF38F6000B9CEA /* GoogleMobileAds */,
 			);
 			productName = LUK7;
 			productReference = 37131ECE2AD8AD7D007A5F0E /* LUK7.app */;
@@ -307,6 +326,7 @@
 			packageReferences = (
 				0E1EF0332AD8E704004A86B3 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				37065D482AEDF2D3006AD559 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3788E7BA2AEF38F6000B9CEA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 37131ECF2AD8AD7D007A5F0E /* Products */;
 			projectDirPath = "";
@@ -353,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				378E351A2AD9884200A542A7 /* Acerca.swift in Sources */,
+				3788E7C22AEF3A9E000B9CEA /* BannerAd.swift in Sources */,
 				378E35112AD987BD00A542A7 /* TermsView.swift in Sources */,
 				378E350F2AD987B600A542A7 /* SplashScreenView.swift in Sources */,
 				0E1EF02E2AD8E1D3004A86B3 /* HomeDetailsView.swift in Sources */,
@@ -364,6 +385,7 @@
 				0E3D71562ADA187B00277BEE /* VoucherView.swift in Sources */,
 				378E35162AD9883600A542A7 /* Donar.swift in Sources */,
 				37131ED42AD8AD7D007A5F0E /* Persistence.swift in Sources */,
+				374C219A2AF0986A0028F96B /* SafariWebView.swift in Sources */,
 				37131ED92AD8AD7D007A5F0E /* ContentView.swift in Sources */,
 				37131ED72AD8AD7D007A5F0E /* LUK7.xcdatamodeld in Sources */,
 			);
@@ -467,6 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -523,6 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -537,12 +561,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LUK7/LUK7.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1;
+				CURRENT_PROJECT_VERSION = 2.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"LUK7/Preview Content\"";
 				DEVELOPMENT_TEAM = T39JCQBRK9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LUK7/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LUK7;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to scan barcodes.";
@@ -560,7 +585,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.1;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC ";
 				PRODUCT_BUNDLE_IDENTIFIER = marlon.LUK7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -579,12 +605,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LUK7/LUK7.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1;
+				CURRENT_PROJECT_VERSION = 2.2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"LUK7/Preview Content\"";
 				DEVELOPMENT_TEAM = T39JCQBRK9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LUK7/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LUK7;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to scan barcodes.";
@@ -602,7 +629,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.1;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC ";
 				PRODUCT_BUNDLE_IDENTIFIER = marlon.LUK7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -762,6 +790,14 @@
 				minimumVersion = 10.16.0;
 			};
 		};
+		3788E7BA2AEF38F6000B9CEA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -779,6 +815,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 37065D482AEDF2D3006AD559 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		3788E7BB2AEF38F6000B9CEA /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3788E7BA2AEF38F6000B9CEA /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 

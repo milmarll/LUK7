@@ -2,7 +2,7 @@
 //  HomeDetailsView.swift
 //  LUK7
 //
-//  Created by Elier Ayala Bernal on 2023-10-12.
+//  Created by Marlon Milanes Rivero on 2023-10-12.
 //
 
 import SwiftUI
@@ -14,9 +14,10 @@ struct HomeDetailsView: View {
     
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)], animation: .default) private var items: FetchedResults<Item>
 
-
     @State var item: Item
     @State private var isShowBarcode: Bool = false
+    
+    
     
     var body: some View {
         List {
@@ -24,10 +25,11 @@ struct HomeDetailsView: View {
                 EmptyView()
             }
             
-            if let init_code = item.init_code {
+            if let init_code = item.init_code, let init_code_timestamp = item.timestamp {
                 Section {
                     VStack(alignment: .leading) {
                         Text("\(init_code)")
+                        Text("\(formatDate(init_code_timestamp))")
                         Divider()
                         if let barcode = generateBarcode(from: init_code) {
                             Image(uiImage: barcode)
@@ -41,10 +43,11 @@ struct HomeDetailsView: View {
                 }
             }
             
-            if let end_code = item.end_code {
+            if let end_code = item.end_code, let end_code_timestamp = item.time_end {
                 Section {
                     VStack(alignment: .leading) {
                         Text("\(end_code)")
+                        Text("\(formatDate(end_code_timestamp))") // Aquí muestra la hora final
                         Divider()
                         if let barcode = generateBarcode(from: end_code) {
                             Image(uiImage: barcode)
@@ -63,6 +66,7 @@ struct HomeDetailsView: View {
                     Text("Total LPN: \(restarUltimosCuatroDigitos(init_code_calc, end_code_calc))")
                 }
             }
+    
         }
         .listStyle(.insetGrouped)
         .toolbar {
@@ -108,6 +112,7 @@ struct HomeDetailsView: View {
                         item.init_code = newItemValue
                     case .end_code:
                         item.end_code = newItemValue
+                        item.time_end = Date()
                     }
                 }
                 
@@ -155,6 +160,12 @@ extension View {
         } else {
             return "home_error"
         }
+    }
+    
+    func formatDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        return dateFormatter.string(from: date)
     }
 
 
