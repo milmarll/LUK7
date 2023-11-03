@@ -59,4 +59,13 @@
 "setting_share" = "Share";
 "setting_APP" = "Share LUK7";
 "setting_mensj" = "Check out this amazing app.";
+//Report
+"report_title" = "My Reports";
+"report_look" = "Look for";
+"report_fecha" = "Unknown date";
+"report_add" = "Add";
+"report_details" = "Report Details";
+"report_title_textfield" = "Title";
+"report_message" = "Report message";
+"report_message_textfield" = "Save your reports when you are out of work on the production line or other incident for which you are not working";
 

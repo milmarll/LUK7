@@ -18,11 +18,20 @@ struct VoucherView: View {
     var body: some View {
         NavigationView {
             List {
+                
+                Image(systemName: "person")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80, height:80)
+                    .frame(maxWidth: .infinity)
+
+                
                 if !name.isEmpty {
                     HStack {
-                        Image(systemName: "person")
                         VStack {
                             Text("\(name)")
+                                .frame(maxWidth: .infinity)
+
                         }
                     }
                 }
@@ -47,7 +56,7 @@ struct VoucherView: View {
             }
             .overlay(alignment: .bottom) {
                 HStack {
-                    BannerAd(unitID: "ca-app-pub-4020019088912260/1284175430")
+                    BannerAd(unitID: "ca-app-pub-4020019088912260/6506320758")
                         .frame(minHeight: 50, maxHeight: 50)
                 }
             }

@@ -17,10 +17,15 @@ struct ContentView: View {
                 .tabItem { Label("home_home", systemImage: "house") }
                 .environment(\.managedObjectContext, viewContext)
             
-            VoucherView().tabItem { Label("Voucher", systemImage: "person") }
+            VoucherView()
+                .tabItem { Label("Voucher", systemImage: "person") }
+            
+            Product()
+                .tabItem { Label("Mis Reportes", systemImage: "doc.text") }
+                .environment(\.managedObjectContext, viewContext)
             
             Ajustes()
-                .tabItem { Label("home_gear", systemImage: "gear") }
+               .tabItem { Label("home_gear", systemImage: "gear") }
             
         }
     }

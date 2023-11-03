@@ -34,6 +34,7 @@
 		378E351D2AD9886C00A542A7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E351C2AD9886C00A542A7 /* Extensions.swift */; };
 		378E35242AD98BB300A542A7 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E35232AD98BB300A542A7 /* MailView.swift */; };
 		378E35272AD9AA7A00A542A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 378E35292AD9AA7A00A542A7 /* Localizable.strings */; };
+		37AC16E12AF59B8900F42BF3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC16E02AF59B8900F42BF3 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		378E35232AD98BB300A542A7 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		378E35282AD9AA7A00A542A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		378E352A2AD9AA8C00A542A7 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		37AC16E02AF59B8900F42BF3 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				378E35142AD9881C00A542A7 /* Ajustes */,
 				378E350D2AD9877C00A542A7 /* Intro */,
 				37131ED12AD8AD7D007A5F0E /* LUK7App.swift */,
+				37AC16E02AF59B8900F42BF3 /* Product.swift */,
 				37131ED32AD8AD7D007A5F0E /* Persistence.swift */,
 				37131ED82AD8AD7D007A5F0E /* ContentView.swift */,
 				0E1EF02B2AD8E01E004A86B3 /* HomeView.swift */,
@@ -377,6 +380,7 @@
 				378E35112AD987BD00A542A7 /* TermsView.swift in Sources */,
 				378E350F2AD987B600A542A7 /* SplashScreenView.swift in Sources */,
 				0E1EF02E2AD8E1D3004A86B3 /* HomeDetailsView.swift in Sources */,
+				37AC16E12AF59B8900F42BF3 /* Product.swift in Sources */,
 				0E1EF02C2AD8E01E004A86B3 /* HomeView.swift in Sources */,
 				378E35242AD98BB300A542A7 /* MailView.swift in Sources */,
 				37131ED22AD8AD7D007A5F0E /* LUK7App.swift in Sources */,
@@ -561,7 +565,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LUK7/LUK7.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.0;
+				CURRENT_PROJECT_VERSION = 2.3;
 				DEVELOPMENT_ASSET_PATHS = "\"LUK7/Preview Content\"";
 				DEVELOPMENT_TEAM = T39JCQBRK9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -585,7 +589,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC ";
 				PRODUCT_BUNDLE_IDENTIFIER = marlon.LUK7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,7 +609,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LUK7/LUK7.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.0;
+				CURRENT_PROJECT_VERSION = 2.3;
 				DEVELOPMENT_ASSET_PATHS = "\"LUK7/Preview Content\"";
 				DEVELOPMENT_TEAM = T39JCQBRK9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -629,7 +633,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC ";
 				PRODUCT_BUNDLE_IDENTIFIER = marlon.LUK7;
 				PRODUCT_NAME = "$(TARGET_NAME)";

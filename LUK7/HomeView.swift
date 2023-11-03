@@ -45,7 +45,7 @@ struct HomeView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .overlay(alignment: .bottom) {
                     HStack {
-                        BannerAd(unitID: "ca-app-pub-4020019088912260/1284175430")
+                        BannerAd(unitID: "ca-app-pub-4020019088912260/6506320758")
                             .frame(minHeight: 50, maxHeight: 50)
                     }
                 }

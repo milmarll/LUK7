@@ -58,3 +58,13 @@
 "setting_share" = "Compartir";
 "setting_APP" = "Compartir LUK7";
 "setting_mensj" = "Echa un vistazo a esta increíble aplicación.";
+//Report
+"report_title" = "Mis Reportes";
+"report_look" = "Buscar";
+"report_fecha" = "Fecha Desconocida";
+"report_add" = "Agregar";
+"report_details" = "Detalles del Reporte";
+"report_title_textfield" = "Título";
+"report_message" = "Mensaje del Reporte";
+"report_message_textfield" = "Guarda tus reportes cuando te quedes sin trabajo en la línea de producción u otro incidente por el cual no estás trabajando";
+

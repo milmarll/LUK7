@@ -6,47 +6,59 @@
 //
 import SwiftUI
 
-
 struct Product: View {
     @Environment(\.managedObjectContext) private var viewContext
-
     @FetchRequest(sortDescriptors: []) var report: FetchedResults<Report>
     @State private var search: String = ""
     @State private var isNew: Bool = false
     @State private var isCopyAlertPresented: Bool = false
     @State var tempName: String = ""
     @State var tempTarjetas: String = ""
-    
     @Environment(\.editMode)  var mode
+    @State private var selectedReport: Report?
+    @State private var showingDetailSheet = false
 
     var body: some View {
-        VStack {
+        NavigationView {
             Form {
                 ForEach(report.filter { search.isEmpty || $0.name!.localizedCaseInsensitiveContains(search) }, id: \.id) { report in
                     
                     HStack {
-                        Image("Card1")
+                        Image(systemName: "wrench.and.screwdriver")
                             .resizable()
-                            .frame(width: 50, height: 35)
+                            .scaledToFit()
+                            .frame(width: 24, height: 24)
                         
                         Button {
-                            copyToClipboard(text: report.report ?? "0")
-                            isCopyAlertPresented = true
+                            self.selectedReport = report
                         } label : {
                             VStack(alignment: .leading) {
                                 Text(report.name ?? "Unknown")
-                                Text(report.report.report ?? "0")
+                                Text(report.report ?? "0")
                                     .font(.subheadline)
                                     .foregroundStyle(Color.secondary)
                             }.frame(maxWidth: .infinity, alignment: .leading)
                         }
+                        
+                        HStack {
+                            
+                            if let date = report.createdAt {
+                                Text(date, formatter: itemFormatter)
+                                    .font(.footnote)
+                            } else {
+                                Text("report_fecha")
+                                    .font(.footnote)
+                            }
+                        }
+                        
                     }
+                    
                 }
                 .onDelete(perform: deleteReport)
                 
             }
-            .navigationTitle("Mis Tarjetas")
-            .searchable(text: $search, prompt: "Buscar")
+            .navigationTitle("report_title")
+            .searchable(text: $search, prompt: "report_look")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -54,14 +66,14 @@ struct Product: View {
                         tempTarjetas = ""
                         isNew.toggle()
                     } label: {
-                        Text("Agregar")
+                        Text("report_add")
                     }
                 }
                 
             }
-            .alert("Detalles de la tarjeta", isPresented: $isNew) {
-                TextField("Nombre", text: $tempName)
-                TextField("No. de tarjeta", text: $tempTarjetas)
+            .alert("report_details", isPresented: $isNew) {
+                TextField("report_title_textfield", text: $tempName)
+                TextField("report_message", text: $tempTarjetas)
                 
                 Button("Ok", action: {
                     
@@ -73,32 +85,38 @@ struct Product: View {
                 })
                 
                 Button("Cancel", role: .cancel) {
-                    isNew.toggle() // Cierra el alert sin hacer nada
+                    isNew.toggle()
                 }
             } message: {
-                Text("Verifica y llena la información de tu tarjeta")
+                Text("report_message_textfield")
             }
-            .alert("Tarjeta Copiada", isPresented: $isCopyAlertPresented) {
-                        Button("OK", role: .cancel) {
-                            isCopyAlertPresented = false // Oculta el alert al presionar OK
-                        }
-                    }
-            
+            .sheet(item: $selectedReport) { report in
+                ReportDetailView(report: report, closeAction: {
+                    self.selectedReport = nil
+                })
+            }
+            .overlay(alignment: .bottom) {
+                HStack {
+                    BannerAd(unitID: "ca-app-pub-4020019088912260/6506320758")
+                        .frame(minHeight: 50, maxHeight: 50)
+                }
+            }
+        
+        
         }
-    
+        
     }
     
-
     func addReport() {
-        withAnimation {
-            let report = Report(context: viewContext)
-            report.id = UUID()
-            report.name = self.tempName
-            report.report  = self.tempTarjetas
-
-            saveContext()
+            withAnimation {
+                let newReport = Report(context: viewContext)
+                newReport.id = UUID()
+                newReport.name = self.tempName
+                newReport.report = self.tempTarjetas
+                newReport.createdAt = Date()
+                saveContext()
+            }
         }
-    }
     
     func editReport(report: Report, newName: String, newReport: String) {
         withAnimation {
@@ -107,18 +125,18 @@ struct Product: View {
             saveContext()
         }
     }
-
+    
     func copyToClipboard(text: String) {
-            UIPasteboard.general.string = text
+        UIPasteboard.general.string = text
     }
-
+    
     private func deleteReport(offsets: IndexSet) {
         withAnimation {
             offsets.map { report[$0] }.forEach(viewContext.delete)
             saveContext()
         }
     }
-
+    
     private func saveContext() {
         do {
             try viewContext.save()
@@ -126,9 +144,65 @@ struct Product: View {
             let error = error as NSError
             fatalError("An error occured: \(error)")
         }
-
+        
     }
+    
+    private let itemFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
+    }()
 }
+
+struct ReportDetailView: View {
+    let report: Report
+    let closeAction: () -> Void
+
+    var body: some View {
+        NavigationView {
+            VStack(alignment: .leading, spacing: 8) {
+                // Título
+                HStack {
+                    Text(report.name ?? "No Title")
+                        .font(.largeTitle) // Título con fuente grande
+                        .bold()
+                    Spacer()
+                    Button("Done", action: closeAction) // Botón de cerrar
+                        .font(.headline) // Botón con fuente destacada
+                }
+
+                Divider()
+
+                // Mensaje
+                Text(report.report ?? "No Content")
+                    .font(.body) // Mensaje con fuente del cuerpo
+
+                Spacer()
+
+                // Fecha y hora
+                if let createdAt = report.createdAt {
+                    Text(createdAt, formatter: itemFormatter)
+                        .font(.footnote) // Fecha con fuente pequeña
+                        .frame(maxWidth: .infinity, alignment: .trailing) // Alineado a la derecha
+                }
+            }
+            .padding()
+            .navigationBarHidden(true) // Ocultamos la barra de navegación para utilizar nuestro propio botón
+        }
+    }
+
+    private let itemFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
+    }()
+}
+
+
 #Preview {
-    Product()
+    Product()        
 }
+
+
